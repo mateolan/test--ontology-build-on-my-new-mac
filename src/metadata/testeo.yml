@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/testeo
+
+idspace: TESTEO
+base_url: /obo/testeo
+
+products:
+- testeo.owl: https://raw.githubusercontent.com/mateolan/test--ontology-build-on-my-new-mac/master/testeo.owl
+- testeo.obo: https://raw.githubusercontent.com/mateolan/test--ontology-build-on-my-new-mac/master/testeo.obo
+
+term_browser: ontobee
+example_terms:
+- TESTEO_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/mateolan/test--ontology-build-on-my-new-mac/v
+
+- prefix: /tracker/
+  replacement: https://github.com/mateolan/test--ontology-build-on-my-new-mac/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/TESTEO?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/mateolan/test--ontology-build-on-my-new-mac/master/
